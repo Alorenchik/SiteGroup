@@ -1,0 +1,94 @@
+/*Каркас сайта*/
+body {background-color: #000;  font-size:14px; font-family:Arial, Sans-serif;}
+#basic {width:100%; margin: auto; 
+}
+img {border:0;}
+a {color:#ff9c00;}
+/*Верхнее меню сайта*/
+#top-menu {width:100%;}
+.logo__img{
+	width: 100%;
+	border-radius: 50%;
+	 transition: all .5s;
+}
+.logo__img:hover{-webkit-transform: scale(1.1);-ms-transform: scale(1.1); 	box-shadow: 0 0px 40px #FFF; transform: scale(1.1); transition: all .5s;}
+
+.bg-1 {margin: 0%; position: relative; background:#000; position: fixed; top:0px !important;
+width: 100%; box-shadow: 0 0 5px #000; z-index: 999;
+}
+.bg-1 ul {margin:0; padding:0; list-style:none;}
+.bg-1 ul li {float:left; padding:3% 1% 0px 10%; }
+.bg-1 ul li a {display:block; position:relative;transition: all .5s; color:#404348; font-size: 100%; text-shadow: 0 0 0px #404348; text-align: center; text-decoration:none; text-transform:uppercase;}
+.bg-1 ul li a:hover {animation: top_menu_text 0.5s 1 normal; text-shadow: 0 0 9px #fff; color:#fff; transition: all .5s;
+}
+.bg-1 ul li a:after{
+	transition: all .5s;
+	display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ' ';
+  color: #fff;
+  background: #fff;
+  height: 1px;}
+  .bg-1 ul li a:hover:after{ width: 100%; transition: all .5s; }
+@keyframes top_menu_text {
+		from {color:#fff; text-shadow: 0 0 0px #fff;}
+		to {text-shadow: 0 0 9px #fff; color:#fff;}
+	}
+.bg-1 ul li ol a {all: initial;}
+.bg-1 ul li ol a:after {all: initial; animation: none;}
+/*Левое меню и Контент*/
+#content {width:90%; padding:15% 0 0 0; margin: auto;}
+.right { float:right; width:100%;  font-size: 100%;text-align: center; color:#fff; font-family: "Groupt"; margin: auto;}
+.right h1 {text-transform:uppercase; color:#fff; font-weight:normal; margin-top:0; text-shadow: 0 0 3px #fff; font-family: "Group";}
+  .Chelovek { font-family: Comic Sans MS; color: #fff; transition: all .5s;}
+
+
+ .Gruupa{width: 100%;
+ 	height: 80%; margin: auto;}
+.Chelovek:hover {text-shadow: 0 0 3px red; color: red; transition: all .5s;}
+.Konec {font-size: 100%; color: grey; display: block; margin: auto; width: 90%; text-align: center;}
+#bottom_fade {
+    z-index: 99;
+    position: fixed;
+    bottom: 0%;
+    background-image: url("https://png-library.net/images/banner-mask.png");
+}
+.mobile {display: none}
+.about__play{background-color: black; border-radius: 5px; margin-left: 5%; margin-right:55%; padding: 2%; box-shadow: 0 0 3px grey;}
+@font-face {
+font-family: "Group"; 
+src: url("Group.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+@font-face {
+font-family: "Groupt"; 
+src: url("Groupt.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+@font-face {
+font-family: "Glavna"; 
+src: url("Glavna.otf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+@media (max-width: 768px){
+	.bg-1 ul li {padding-left:8%}
+	.Vk{display: none}
+	.mobile {display: block}
+}
+@media (max-width: 540px){
+	  .bg-1 ul li a:hover:after{ width: 0%; transition: all .5s; }
+	#content{padding: 50% 0 0 0}
+	.logo__img{display: none}
+	.bg-1 {position: absolute;}
+	.bg-1 ul li {font-size: 100%; position: block; width: 100%; padding-top: 10%; padding-left: 0}
+		.bg-1 ul li a {font-size: 30px; position: absolute; text-align: center; width: 100%; padding-left: 0; font-family: "Glavna";}
+	.Vk{display: none}
+	.mobile {display: block}
+}
